@@ -6,7 +6,7 @@
 ## How to Launch the App:
 
 - We recommend launching this app through Visual Studio Code.
-- Clone the entire Git repository onto your local machine @ "https://github.com/allenMa1/CS35L-Final.git"
+- Clone the entire Git repository onto your local machine @ "https://github.com/shr1haan/Task-Manager-CS35L.git"
   and open the project folder in Visual Studio Code.
 - Open a shell within Visual Studio Code.
 - Run npm install to install needed dependencies
