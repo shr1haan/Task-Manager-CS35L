@@ -1,3 +1,4 @@
+const task = require('../models/tasks')
 
 // controller for fetching all tasks
 const get_all_tasks = (req, res) => {
@@ -5,8 +6,9 @@ const get_all_tasks = (req, res) => {
 }
 
 // controller for creating new tasks
-const create_task = (req, res) => {
-    res.send('create new task')
+const create_task = async (req, res) => {
+    const task_to_create = await task.create(req.body)
+    res.status(201).json({task_to_create})
 }
 
 // controller for getting info on one task
