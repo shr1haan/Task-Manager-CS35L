@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400');
+@import url('https://fonts.googleapis.com/css?family=Arvo:400|Montserrat:400');
 *,
 ::after,
 ::before {
@@ -45,11 +45,11 @@
   --green-dark: #0f5132;
 
   /* typography */
-  --headingFont: 'Inconsolata', monospace;
+  --headingFont: 'Arvo', monospace;
   --bodyFont: 'Montserrat', sans-serif;
   --smallText: 0.7em;
   /* rest */
-  --backgroundColor: var(--grey-50);
+  --backgroundColor: var(--red-dark);
   --textColor: var(--grey-1000);
   --borderRadius: 0.25rem;
   --letterSpacing: 1px;
@@ -137,7 +137,7 @@ a {
   cursor: pointer;
   appearance: none;
   color: var(--white);
-  background: var(--primary-500);
+  background: var(--red-dark);
   border: none;
   border-radius: var(--borderRadius);
   letter-spacing: var(--letterSpacing);
@@ -149,7 +149,7 @@ a {
 
 .btn:hover {
   color: var(--white);
-  background: var(--primary-700);
+  background: var(--black);
   box-shadow: var(--shadow-2);
 }
 button.small {
