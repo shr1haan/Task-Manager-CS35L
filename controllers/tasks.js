@@ -5,7 +5,7 @@ const get_all_tasks = async (req, res) => {
     try{
         //since we want all, we use an empty object
         const show_tasks = await task.find({})
-        res.status(200).json({show_tasks})
+        res.status(200).json({tasks: show_tasks})
     } catch(error){
         res.status(500).json({msg:error})
     }
@@ -15,7 +15,7 @@ const get_all_tasks = async (req, res) => {
 const create_task = async (req, res) => {
     try {
         const task_to_create = await task.create(req.body)
-        res.status(201).json({task_to_create})
+        res.status(201).json({tasks: task_to_create})
     } catch (error) {
         res.status(500).json({msg:error})
     }
@@ -31,7 +31,7 @@ const get_one_task = async (req, res) => {
             return res.status(404).json({msg: `no task with id : ${task_id} found`})
 
         }
-        res.status(200).json({task_to_find})
+        res.status(200).json({tasks: task_to_find})
     } catch (error) {
         res.status(500).json({msg:error})
     }
@@ -48,7 +48,7 @@ const update_task = async (req, res) => {
             return res.status(404).json({msg: `no task with id : ${task_id} found`})
         }
 
-        res.status(200).json({task_to_edit})
+        res.status(200).json({tasks: task_to_edit})
 
     } catch (error) {
         res.status(500).json({msg:error})
@@ -64,7 +64,7 @@ const delete_task = async (req, res) => {
         if (task_to_delete == null){
             return res.status(404).json({msg: `no task with id : ${task_id} found`})
         }
-        res.status(200).json({task_to_delete})
+        res.status(200).json({tasks: task_to_delete})
     }
     catch (error){
         res.status(500).json({msg:error})

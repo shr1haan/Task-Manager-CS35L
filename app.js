@@ -7,6 +7,7 @@ const connect_to_db = require('./db/connect')
 
 
 //middleware info
+app.use(express.static('./public'))
 app.use(express.json())
 
 app.use('/api/v1/tasks', tasks)
